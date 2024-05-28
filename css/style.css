@@ -1,0 +1,264 @@
+:root{
+    --color1: #7B5A43;
+    --color2: #A67B5B;
+    --color3: #D6D3CE;
+}
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+p{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    color: var(--color1);
+}
+h1, h2{
+    font-family: "Noto Sans", sans-serif;
+    color: var(--color1);
+    font-size: 2.5rem;
+}
+a{
+    font-family: "Noto Sans", sans-serif;
+
+}
+
+h3{
+    color: var(--color1);
+}
+nav{
+    background-color: var(--color3);
+    opacity: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid var(--color1);
+}
+.left{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+.links{
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 17px;
+}
+.links:hover{
+    color: var(--color2);
+}
+.right{
+    color: var(--color1);
+    font-size: large;
+}
+.right h1{
+    margin: 5px;
+    font-size: 2rem;
+}
+img{
+    object-fit: cover;
+    border-radius: 10px;
+}
+#hero{
+    background-image: url("../assets/images/texture1.jpg");
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro h1{
+    font-family: "Dancing Script", cursive;
+    color: var(--color1);
+    text-align: center;
+    font-size: 65px;
+    margin-bottom: 0;
+
+}
+.intro h3{
+  color: var(--color1);
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+}
+#intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    min-height: 100vh;
+    
+}
+#intro div p, #intro div h2 {
+    text-align: center;
+    max-width: 500px;
+    color: var(--color1);
+}
+.profile{
+    border-radius: 50%;
+    border: 2px solid var(--color1);
+    align-self: center;
+}
+.intro div{
+   display: flex;
+   flex-direction: column;
+   
+}
+#skills{
+    padding:  80px 50px 20px 50px;
+    max-width: 80%;
+    margin: auto;
+    min-height: 100vh;
+}
+#skills > h2{
+    text-align: center;
+
+}
+.section{
+    display: grid;
+    grid-template-rows:1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-auto-flow: column;
+    margin-bottom: 20px;
+}
+.section div{
+    grid-column: span 2;
+}
+.section div h1  {
+    font-size: 3rem;
+}
+.container{
+    background-color: var(--color3);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+#projects{
+    background-size: cover;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20vh 1fr;
+    gap: 30px;
+    max-width: 80%;
+    padding-bottom: 20px;
+}
+#projects h2{
+    text-align: center;
+    width: 100%;
+    grid-column: span 3;
+}
+#projects div p{
+    text-align: justify;
+}
+#contact{
+    min-height: 60vh;
+    width: 100%;
+    background-image: url("../assets/images/texture3.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact p{
+    font-size: 1.5rem;
+}
+
+#links{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-basis: 100px;
+    margin-top: 70px;
+    
+}
+
+#links  a{
+    text-decoration: none;
+    background-color: var(--color2);
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 30px;
+    width: 160px;
+    border: 2px solid var(--color3);
+}
+#links a:hover{
+    background-color: var(--color3);
+    color:var(--color1);
+}
+footer{
+    width: 100%;
+    min-height: 30vh;
+    background-color: var(--color3);
+    font-size: 17px;
+    position: relative;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+   
+}
+.copyright{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+.icons{
+    position: relative;
+    top: 3px;
+
+}
+@media (max-width: 831px) {
+    
+    .section{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr ;
+
+    }
+    .section img{
+        order: 0 !important;
+    }
+    #projects{
+        display: flex;
+        flex-direction: column;
+    }
+    #links{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    #navigation > div.right > h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    nav{
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr ;
+    }
+    nav .left{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px
+    }
+
+}
